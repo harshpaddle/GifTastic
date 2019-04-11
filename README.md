@@ -15,7 +15,7 @@ This project was built to utilize my knowledge of using other server's api's to 
 This project lets you add working buttons to the page and then use that button to render gifs related to it on to the page.
 
 ## Screenshots
-![a screenshot](https://github.com/harshpaddle/TriviaGame/blob/master/assets/images/Screen%20Shot%202019-04-07%20at%2010.51.47%20AM.png)
+![a screenshot](https://github.com/harshpaddle/GifTastic/blob/master/assets/images/Screen%20Shot%202019-04-10%20at%208.47.08%20PM.png)
 
 ## How to use?
 1. Click on any of the states to see  glimpse of life in that state.
