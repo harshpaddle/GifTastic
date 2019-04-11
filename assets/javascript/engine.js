@@ -36,13 +36,13 @@ function displayGifs() {
     for (var i = 0; i < 10; i++) {
       var $p = $("<p>");
       $p.text("Rating: " + response.data[i].rating)
-      .addClass("border")
+      .addClass("border m-2")
       .appendTo($(".gifs"));
 
       $p.append($("<br> <br>"))
       
       var $gifImg = $("<img>");
-      $gifImg.addClass("gif float-left m-1")
+      $gifImg.addClass("gif float-left")
         .attr("src", response.data[i].images.original_still.url)
         .attr("data-still", response.data[i].images.original_still.url)
         .attr("data-animate", response.data[i].images.original.url)
