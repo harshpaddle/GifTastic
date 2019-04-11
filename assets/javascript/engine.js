@@ -36,12 +36,13 @@ function displayGifs() {
     for (var i = 0; i < 10; i++) {
       var $p = $("<p>");
       $p.text("Rating: " + response.data[i].rating)
-        .appendTo($(".gifs"));
+      .addClass("border")
+      .appendTo($(".gifs"));
 
       $p.append($("<br> <br>"))
       
       var $gifImg = $("<img>");
-      $gifImg.addClass("gif")
+      $gifImg.addClass("gif float-left m-1")
         .attr("src", response.data[i].images.original_still.url)
         .attr("data-still", response.data[i].images.original_still.url)
         .attr("data-animate", response.data[i].images.original.url)
@@ -49,14 +50,10 @@ function displayGifs() {
         .attr("style", "height: 180px")
         .appendTo($p);
 
-      $p.append($("<hr>"))
-
+      // $p.append($("<hr>"))
     }
-
-    console.log(stateName);
   })
-
-}
+};
 
 $("#add-state").on("click", function() {
   event.preventDefault();
@@ -69,7 +66,7 @@ $("#add-state").on("click", function() {
   console.log(states);
   renderButtons();
   $("#state-input").val("")
-})
+});
 
 
 
@@ -78,7 +75,6 @@ $(document).on("click", ".gif-btn", displayGifs);
 $(document).on("click", ".gif", function (event) {
   event.preventDefault();
 
-  console.log("hitting");
   var state = $(this).attr("gif-state");
   if (state === "still") {
     $(this).attr("src", $(this).attr("data-animate"));
@@ -95,18 +91,6 @@ renderButtons();
 
 
 
-// $(".gif").on("click", function(event) {
-//   event.preventDefault();
-//   console.log("hitting");
-//   var state = $(this).attr("gif-state");
-//   if (state === "still") {
-//     $(this).attr("src", $(this).attr("data-animate"));
-//     $(this).attr("gif-state", "animate")
-//   } else {
-//     $(this).attr("src", $(this).attr("data-still"));
-//     $(this).attr("gif-state", "still")
-//   }
-// });
 
 
 
